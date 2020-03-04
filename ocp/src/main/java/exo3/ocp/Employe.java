@@ -4,17 +4,17 @@ import java.util.ArrayList;
 
 public class Employe {
 	
-      private int salaire=1500;
-      private int annee_courant;
-      private int annee_entree;
+      private double salaire=1500;
+      private double annee_courant;
+      private double annee_entree;
       
-      public Employe(int salaire,int annee_courant,int annee_entree) {
+      public Employe(double salaire,double annee_courant,double annee_entree) {
     	  this.salaire=salaire;
     	  this.annee_courant=annee_courant;
     	  this.annee_entree=annee_entree;
       }
       
-      public int salaire() {
+      public double salaire() {
     	  if(annee_courant-annee_entree>=1) {
     		 salaire=salaire+20;
     	  }
@@ -23,8 +23,8 @@ public class Employe {
       
       private ArrayList employes = new ArrayList();
       
-      public int salaire_total() {
-    	  int salaire_total=0;
+      public double salaire_total() {
+    	  double salaire_total=0;
     	  for(int i = 0; i < employes.size(); i++)
     	  {
     		  Employe emps = (Employe) employes.get (i) ;  
