@@ -16,14 +16,14 @@ public class Teste {
 	
 	@Test
 	public final void test_salaireVen() {
-		ven = new Vendeur(2100,2020,2010,300);
-		assertEquals(2420,ven.salaire());
+		ven = new Vendeur(2100,2020,2010);
+		assertEquals(1820,ven.salaire_Ven(300));
 	}
 	
 	@Test
 	public final void test_salaireEmp() {
 		emp = new Employe(2100,2020,2010);
-	    assertTrue(emp.salaire()==2120);
+	    assertTrue(emp.salaire_Emp()==1520);
 	}
 
 	@Test

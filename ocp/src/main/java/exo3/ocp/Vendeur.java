@@ -2,11 +2,13 @@ package exo3.ocp;
 
 public class Vendeur extends Employe{
 	
-	 public Vendeur(int salaire, int annee_courant, int annee_entree) {
+	 private int commission;
+	 public Vendeur(int salaire, int annee_courant, int annee_entree,int commission) {
 		super(salaire, annee_courant, annee_entree);
+		this.commission=commission;
 	}
 
-	public int salaire_Ven(int commission) {
-   	  return super.salaire_Emp()+commission;
+	public int salaire() {
+   	  return super.salaire()+commission;
      }
 }

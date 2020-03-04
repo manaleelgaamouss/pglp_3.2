@@ -9,12 +9,12 @@ public class Employe {
       private int annee_entree;
       
       public Employe(int salaire,int annee_courant,int annee_entree) {
-    	  this.salaire=salaire;
+    	  this.salaire=1500;
     	  this.annee_courant=annee_courant;
     	  this.annee_entree=annee_entree;
       }
       
-      public int salaire() {
+      public int salaire_Emp() {
     	  if(annee_courant-annee_entree>=1) {
     		 salaire=salaire+20;
     	  }
@@ -24,13 +24,11 @@ public class Employe {
       private ArrayList employes = new ArrayList();
       
       public int salaire_total() {
-    	  int salaire_total=0;
     	  for(int i = 0; i < employes.size(); i++)
     	  {
-    		  Employe emps = (Employe) employes.get (i) ;  
-    		  salaire_total += emps.salaire();
+    		  salaire+= (Integer)employes.get(i);
       }
-	return salaire_total;
+	return salaire;
       }
 }
 
