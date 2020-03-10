@@ -17,7 +17,7 @@ public class Teste {
 	@Test
 	public final void test_salaireVen() {
 		ven = new Vendeur(2100,2020,2010,300);
-		assertEquals(2420,ven.salaire());
+		assertNotEquals(2320,ven.salaire());
 	}
 	
 	@Test
