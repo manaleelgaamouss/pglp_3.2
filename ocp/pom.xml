@@ -18,33 +18,30 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
   
-  <reporting>
+ <build>
     <plugins>
       <plugin>
-        <groupId>com.github.spotbugs</groupId>
-        <artifactId>spotbugs-maven-plugin</artifactId>
-        <version>4.0.0-SNAPSHOT</version>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>3.1.1</version>
+        <configuration>
+          <configLocation>checkstyle.xml</configLocation>
+        </configuration>
       </plugin>
-    
-	    <plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-checkstyle-plugin</artifactId>
-			<version>3.1.0</version>
-			<reportSets>
-				<reportSet>
-					<reports>
-						<report>checkstyle</report>
-					</reports>
-				</reportSet>
-			</reportSets>
-		</plugin>
-		
-	</plugins>
-  </reporting>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>3.0.5</version>
+	<configuration>
+	  <effort>Max</effort>
+	</configuration>
+      </plugin>
+    </plugins>
+  </build>
   
 </project>
